@@ -209,7 +209,7 @@ def main(issue, issue_author, repo_owner):
         file.write(readme.format(
             chess_board=markdown.board_to_markdown(gameboard),
             moves_list=markdown.generate_moves_list(gameboard),
-            turn=('blanca' if gameboard.turn == chess.WHITE else 'negra'),
+            turn=('blanco' if gameboard.turn == chess.WHITE else 'negro'),
             last_moves=last_moves,
             top_moves=markdown.generate_top_moves()))
 

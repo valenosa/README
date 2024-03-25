@@ -38,7 +38,7 @@ def generate_top_moves():
 
 def generate_last_moves():
     markdown = "\n"
-    markdown += "| Movimiento | Autor |\n"
+    markdown += "| Movimientos totales |  Usuario  |\n"
     markdown += "| :--: | :----- |\n"
 
     counter = 0
@@ -84,10 +84,10 @@ def generate_moves_list(board):
             repo=os.environ["GITHUB_REPOSITORY"],
             params=urlencode(settings['issues']['new_game']))
 
-        return "**JUEGO TERMINADO!** " + create_link("Click acá", issue_link) + " para empezar un nuevo juego :D\n"
+        return "**GAME IS OVER!** " + create_link("Click here", issue_link) + " to start a new game :D\n"
 
     if board.is_check():
-        markdown += "**JAQUE!** Elegí tus movimientos con cuidado!\n"
+        markdown += "**CHECK!** Choose your move wisely!\n"
 
     markdown += "|  DESDE  | HACIA |\n"
     markdown += "| :----: | :---------------------- |\n"
